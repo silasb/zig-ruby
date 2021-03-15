@@ -37,6 +37,10 @@ pub const UUID = struct {
 
         return uu;
     }
+
+    pub fn to_string(self: *Self) *[36]u8 {
+        return &self.id;
+    }
 };
 
 fn rb_uuid() callconv(.C) c_ulong {
