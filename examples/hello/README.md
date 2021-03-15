@@ -2,6 +2,8 @@
 
 Hello world example of Zig integration with Ruby.
 
+Important files are `src/main.zig` and `build.zig`.
+
 ## Installation
 
     $ bundle install

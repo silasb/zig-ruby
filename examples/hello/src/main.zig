@@ -37,17 +37,11 @@ pub const UUID = struct {
 
         return uu;
     }
-
-    pub fn to_string(self: *Self) *[36]u8 {
-        return &self.id;
-    }
 };
 
 fn rb_uuid() callconv(.C) c_ulong {
     var i = UUID.new(std.crypto.random.int(u8)) catch unreachable;
-
     var rb_mHello = ruby.rb_str_new2(@as([*]const u8, i.to_string()));
-
     return rb_mHello;
 }
 
