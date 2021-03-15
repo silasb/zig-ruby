@@ -1,6 +1,8 @@
 require 'rake/tasklib'
 
 module Zigrb
+  # Class to help build zig projects with zig build, but it'd be nice to manually configure things all through Ruby like so:
+  # zig build-lib src/main.zig -I/home/silas/.rbenv/versions/2.7.2/include/ruby-2.7.0 -I/home/silas/.rbenv/versions/2.7.2/include/ruby-2.7.0/x86_64-linux -L/home/silas/.rbenv/versions/2.7.2/lib -lc -lruby -dynamic
   class BuildTask < Rake::TaskLib
     attr_accessor :project
 
