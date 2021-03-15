@@ -1,8 +1,10 @@
 # Zigrb
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/zigrb`. To experiment with that code, run `bin/console` for an interactive prompt.
+Small experiments for integrating in Zig with Ruby via some helpful Rakefile tasks.
 
-TODO: Delete this and the text above, and describe your gem
+## TODO
+
+- [ ] Better zig-build integration
 
 ## Installation
 
@@ -22,7 +24,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Update your `Rakefile` like so:
+
+```ruby
+require 'bundler/setup'
+require 'zigrb/build_task'
+
+Zigrb::BuildTask.new('hello')
+
+task default: :build
+```
+
+See new rake tasks defined for you project:
+
+    rake -vT
+    ...
+    build
+
+Building the Zig shared library as defined in your Rakefile:
+
+    rake build
+
+
+## Examples
+
+* [hello](examples/hello/) - Minimal example of project structure
 
 ## Development
 

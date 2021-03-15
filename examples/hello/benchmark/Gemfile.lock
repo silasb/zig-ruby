@@ -1,0 +1,25 @@
+PATH
+  remote: ..
+  specs:
+    hello (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    benchmark-ips (2.8.4)
+    macaddr (1.7.2)
+      systemu (~> 2.6.5)
+    systemu (2.6.5)
+    uuid (2.3.9)
+      macaddr (~> 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  benchmark-ips
+  hello!
+  uuid
+
+BUNDLED WITH
+   2.1.4
